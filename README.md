@@ -2,7 +2,7 @@
     <img width="130" src="public/favicon.png">
 </p>
 <p align="center" >
-    Speakit<br>
+    <b>Speakit</b><br>
     A game which checks if you can speak in a language that you do not know! 🎮
 </p>
 
