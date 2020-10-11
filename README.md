@@ -1,10 +1,12 @@
-<p align="left" >
+<p align="center" >
     <img width="130" src="public/favicon.png">
 </p>
+<p align="center" >
+    Speakit<br>
+    A game which checks if you can speak in a language that you do not know! 🎮
+</p>
 
-# Speakit
-A game which checks if you can speak in a language that you do not know! 🎮
-
+<br>
 
 ## Why people need this?
 
