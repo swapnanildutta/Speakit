@@ -14,7 +14,7 @@ class Logo extends Component {
   }
 
   render() {
-    return <a href="" onClick={this.handleReload} className="logo hidden-mobile">say it!</a>;
+    return <a href="" onClick={this.handleReload} className="logo hidden-mobile">speakit!</a>;
   }
 }
 
