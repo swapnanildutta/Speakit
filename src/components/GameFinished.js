@@ -28,7 +28,7 @@ class GameFinished extends Component {
     const { score } = this.props;
 
     const url = `https://twitter.com/share?url=${window.location
-      .href}&hashtags=sayit&text=I just got ${score} points in Say it.`;
+      .href}&hashtags=sayit&text=I just got ${score} points in Speakit!.`;
 
     const width = 550;
     const height = 400;
