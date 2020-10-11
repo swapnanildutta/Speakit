@@ -59,13 +59,13 @@ class Splash extends Component {
 
     return (
       <div>
-        <h1 className="gap-bottom">Say it!</h1>
+        <h1 className="gap-bottom">Speakit!</h1>
         <p className="gap-bottom">
-          Say it is a game that checks if you can speak<br />
-          in a language that you do not know.
+          A game which checks if you can speak<br />
+        in a language that you do not know.
         </p>
         <p className="gap-bottom-large">
-          Listen the sentence and try to say it!
+          Listen the sentence and try to Speakit!
         </p>
 
         <div className="gap-bottom-large">
