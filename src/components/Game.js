@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import sentences from '../data/sentences.json';
 
+import Level from './Level';
 import GameFinished from './GameFinished';
 
 class Game extends Component {
@@ -28,10 +29,57 @@ class Game extends Component {
     };
   }
 
+  getLevelSentence() {
+    return sentences[this.props.language][`level${this.state.level}`];
+  }
+
+  getLevelEnSentence() {
+    return sentences['en-US'][`level${this.state.level}`];
+  }
+
+  getNextLevel(level) {
+    if (level === 6) {
+      this.setState({ gameFinished: true });
+      return;
+    }
+
+    this.setState({ level: level + 1 });
+  }
+
+  getTotalScore() {
+    return this.state.score;
+  }
+
+  updateScore(score) {
+    this.setState({ score: this.state.score + score });
+  }
+
+  render() {
+    const { speak, recognition } = this.props;
+    const { level, gameFinished, score } = this.state;
+    const sentence = this.getLevelSentence();
+    const enSentence = this.getLevelEnSentence();
+
+    if (gameFinished) {
+      return <GameFinished score={score} />;
+    }
+
+    return (
+      <Level
+        speak={speak}
+        recognition={recognition}
+        level={level}
+        sentence={sentence}
+        enSentence={enSentence}
+      />
+    );
+  }
+}
 
 Game.childContextTypes = {
   updateScore: PropTypes.func,
   getTotalScore: PropTypes.func,
+  getNextLevel: PropTypes.func,
 };
 
 Game.propTypes = {
