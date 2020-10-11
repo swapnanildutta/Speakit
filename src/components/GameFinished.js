@@ -19,7 +19,7 @@ class GameFinished extends Component {
 
     window.FB.ui({
       method: 'share',
-      href: 'https://speakit.xyz',
+      href: 'https://spkt.xyz',
       quote: `My score: ${score}. Try yourself with a language that you don't know!`,
     });
   }
